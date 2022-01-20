@@ -1,0 +1,8 @@
+repos:
+- repo: https://github.com/fedgut/mushroom-log
+  rev: v0.0.1
+  hooks:
+    - id: bundler-audit
+    - id: fasterer
+    - id: reek
+    - id: rubocop

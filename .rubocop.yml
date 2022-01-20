@@ -1,0 +1,93 @@
+require:
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'bin/*'
+    - 'cache/**/*'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+    - 'db/migrate/*'
+    - 'db/schema.rb'
+
+Layout/LineLength:
+  Exclude:
+    - 'config/initializers/*.rb'
+    - 'config/environments/*.rb'
+    - 'db/seeds.rb'
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: special_inside_parentheses
+  SupportedStyles:
+    - special_inside_parentheses
+    - consistent
+    - align_braces
+  IndentationWidth: 4
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: special_inside_parentheses
+  SupportedStyles:
+    - special_inside_parentheses
+    - consistent
+    - align_braces
+  IndentationWidth: 4
+
+Style/BlockComments:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+  SupportedStyles:
+    - indented
+    - indented_relative_to_receiver
+  IndentationWidth: 4
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+    - 'config/environments/*.rb'
+    - 'config/routes.rb'
+
+Metrics/ModuleLength:
+  Exclude:
+    - 'app/helpers/**/*.rb'
+    - 'spec/**/*.rb'
+
+Style/RaiseArgs:
+  EnforcedStyle: compact
+
+Style/RedundantFetchBlock:
+  Enabled: false
+Style/RedundantRegexpEscape:
+  Enabled: false
+Lint/ConstantDefinitionInBlock:
+  Exclude:
+    - 'spec/**/*.rb'
+Lint/EmptyBlock:
+  Enabled: false
+Naming/VariableNumber:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 3
+
+RSpec/ExampleLength:
+  Max: 8
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 6
+
+Lint/MissingSuper:
+  Enabled: false
